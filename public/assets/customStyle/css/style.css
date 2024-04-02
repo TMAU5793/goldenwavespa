@@ -1,0 +1,94 @@
+:root {
+  --theme-color1: #C2A74E;
+  --theme-color2: #011425;
+  --bg-theme-color1: var(--theme-color1);
+  --bg-theme-color2: var(--theme-color2);
+  --border-theme-color1: var(--theme-color1);
+  --border-theme-color2: var(--theme-color2);
+  --theme-color-light: #FFFFFF;
+  --theme-color-dark: #000000;
+  --theme-color-lighter: #F8F8F8;
+  --review-color: #FFAA18;
+  --theme-color1-dark: #B69D49;
+  --text-color: #707070;
+  --headings-color: #1C1A1D;
+  --link-color: var(--theme-color-dark);
+  --link-hover-color: var(--theme-color-dark);
+  --text-font: "IBM Plex Sans Thai", sans-serif;
+  --title-font: "IBM Plex Sans Thai", serif;
+  --style-font: "IBM Plex Sans Thai", cursive;
+  --body-font-size: 16px;
+  --body-line-height: 29px;
+  --body-font-weight: 400;
+  --line-height-heading-h1: 1.2em;
+  --line-height-heading: 1.211em;
+  --line-height-heading-small: 1.4em;
+  --h1-font-size: 80px;
+  --h2-font-size: 60px;
+  --h3-font-size: 40px;
+  --h4-font-size: 30px;
+  --h5-font-size: 20px;
+  --h6-font-size: 18px;
+  --h1-font-weight: 700;
+  --h2-font-weight: 700;
+  --h3-font-weight: 700;
+  --h4-font-weight: 700;
+  --h5-font-weight: 700;
+  --h6-font-weight: 700;
+  --sec-title-subtitle-color: var(--theme-color1);
+  --sec-title-subtitle-font-size: 25px;
+  --sec-title-subtitle-font-family: var(--style-font);
+  --sec-title-subtitle-font-weight: 400;
+  --sec-title-subtitle-line-height: 31.25px;
+  --sec-title-color: var(--theme-color-dark);
+  --sec-title-font-size: var(--h2-font-size);
+  --sec-title-font-family: var(--title-font);
+  --sec-title-font-weight: 600;
+  --sec-title-title-line-height: 1.172em;
+  --theme-light-background: #f8f6f1;
+  --theme-light-background-text-color: var(--headings-color);
+  --theme-black: #000000;
+  --container-width: 1200px;
+  --small-container-width: 1000px;
+  --large-container-width: 1326px;
+  --container-pt: 120px;
+  --container-pb: 120px;
+}
+
+.main-menu .navigation > li {
+  padding: 25px 0;
+}
+
+.header-style-two .header-lower .main-box .outer-box .mobile-nav-toggler {
+  padding: 25px 0;
+}
+
+.main-menu .navigation > li.current > a {
+  color: var(--sec-title-subtitle-color);
+}
+
+.about-section-two .about2-pattrn1 {
+  bottom: -70px;
+  z-index: 99;
+}
+.about-section-two .content-column .inner-column .list-box .inner .thumb img {
+  max-width: 85px;
+}
+
+.blog-block .content-box .read-more, .blog-block .content-box .title, .blog-block .content-box .post-meta li {
+  font-size: 16px;
+}
+
+.service-block .inner-box .content-box .icon {
+  max-width: 100px;
+}
+
+h3.title {
+  font-size: 20px;
+}
+
+h4.title {
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

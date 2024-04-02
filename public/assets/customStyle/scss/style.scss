@@ -1,0 +1,51 @@
+@import "../../scss/common/root";
+
+.main-menu .navigation > li{
+    padding: 25px 0;
+}
+
+.header-style-two{
+    .header-lower{
+        .main-box{
+            .outer-box .mobile-nav-toggler{
+                padding: 25px 0;
+            }
+        }
+    }
+}
+
+.main-menu .navigation > li.current > a{
+    color: var(--sec-title-subtitle-color);
+    
+}
+
+.about-section-two{
+    .about2-pattrn1{
+        bottom: -70px;
+        z-index: 99;
+    }
+    .content-column .inner-column .list-box .inner .thumb img{
+        max-width: 85px;
+    }
+}
+
+.blog-block{
+    .content-box{
+        .read-more, .title, .post-meta li{
+            font-size: 16px;
+        }
+    }
+}
+
+.service-block .inner-box .content-box .icon{
+    max-width: 100px;
+}
+
+
+h3.title{
+    font-size: 20px;
+}
+
+h4.title{
+    font-size: 18px;
+}

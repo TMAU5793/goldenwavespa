@@ -1,0 +1,163 @@
+/*** 
+
+====================================================================
+    Contact Section
+====================================================================
+
+***/
+
+.contact-section {
+  background-color: #0f1b24;
+  position: relative;
+  padding: 70px 0 30px;
+  margin: 100px 0;
+  z-index: 2;
+  @include media-breakpoint-down(xl){
+    margin: 0;
+  }
+  &:before {
+    background: linear-gradient(to left, #141215, rgb(20 18 21 / 70%), transparent, transparent);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: -2;
+  }
+  .curved-shape-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 69px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .curved-shape-bottom {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    height: 69px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .form-column {
+    position: relative;
+    .sec-title {
+      margin-bottom: 39px;
+      h3 {
+        color: var(--theme-color-light);
+      }
+      .text {
+        color: var(--theme-color-light);
+        br {
+          @include media-breakpoint-down(md){
+            display: none;
+          }
+        }
+      }
+    }
+    .inner-column {
+      position: relative;
+    }
+    .contact-block {
+      position: absolute;
+      top: calc(50% + 2px);
+      left: 0;
+      transform: translate(-100%, -50%);
+      .inner-box {
+        position: relative;
+      }
+    }
+  }
+  .contact-form {        
+    .form-control, .input-text {
+      color: #fff;
+      &::placeholder {
+        color: #fff;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder {
+        color: #fff;
+      }
+      &::-ms-input-placeholder {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+// Contact Form
+.contact-form {
+  position: relative;
+  padding: 56px 0 100px;
+  @include media-breakpoint-down(xl){
+    padding: 90px 40px 140px;
+  }
+  @include media-breakpoint-down(sm){
+    padding: 90px 10px 140px;
+  }
+  .form-group {
+    position: relative;
+    margin-bottom: 13px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .select2-container--default .select2-selection--single,
+  input:not([type="submit"]),
+  textarea,
+  select {
+    position: relative;
+    display: block;
+    height: 55px;
+    width: 100%;
+    padding: 10px 10px 3px 0;
+    font-size: var(--body-font-size);
+    color: var(--theme-color-light);
+    line-height: 29px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(235, 235, 235, 20%);
+    border-radius: 0;
+    margin-bottom: 0;
+    @include transition(all 300ms ease);
+  }
+  textarea {
+    height: auto;
+    min-height: 127px;
+    padding-top: 20px;
+  }
+  ::-webkit-input-placeholder {color: #fff;}
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--theme-color-light);
+  }
+  button {
+    margin-top: 17px;
+  }
+}
+
+.contact-details{
+  .form-control{
+    &::placeholder{
+      color: var(--text-color);
+    }
+  }
+}
