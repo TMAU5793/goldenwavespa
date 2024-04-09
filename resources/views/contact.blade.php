@@ -10,14 +10,14 @@
 
         <!-- Start main-content -->
         <section class="page-title" style="background-image: url({{ url('assets/images/background/page-title-bg.png') }});">
-            <h1 class="large-title">Contact</h1>
+            <h1 class="large-title"></h1>
             <div class="image-curve"></div>
             <div class="auto-container">
                 <div class="title-outer text-center">
-                    <h1 class="title">Contact Us</h1>
+                    <h1 class="title">{!! __('messages.contactUs') !!}</h1>
                     <ul class="page-breadcrumb">
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li>Contact Us</li>
+                        <li><a href="{{ route('home') }}">{!! __('messages.home') !!}</a></li>
+                        <li>{!! __('messages.contactUs') !!}</li>
                     </ul>
                 </div>
             </div>
@@ -30,23 +30,23 @@
                 <div class="row">
                     <div class="col-xl-7 col-lg-6">
                         <div class="sec-title">
-                            <span class="sub-title">Send us email</span>
-                            <h2>Feel free to write</h2>
+                            <span class="sub-title"></span>
+                            <h4>{!! __('messages.contactformtitle') !!}</h4>
                         </div>
                         <!-- Contact Form -->
-                        <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php"
+                        <form id="contact_form" name="contact_form" class="" action=""
                             method="post">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <input name="form_name" class="form-control" type="text"
-                                            placeholder="Enter Name">
+                                            placeholder="{!! __('messages.contactname') !!}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <input name="form_email" class="form-control required email" type="email"
-                                            placeholder="Enter Email">
+                                            placeholder="{!! __('messages.contactmail') !!}">
                                     </div>
                                 </div>
                             </div>
@@ -54,25 +54,25 @@
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <input name="form_subject" class="form-control required" type="text"
-                                            placeholder="Enter Subject">
+                                            placeholder="{!! __('messages.contactsubject') !!}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mb-3">
                                         <input name="form_phone" class="form-control" type="text"
-                                            placeholder="Enter Phone">
+                                            placeholder="{!! __('messages.contactphone') !!}">
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <textarea name="form_message" class="form-control required" rows="7" placeholder="Enter Message"></textarea>
+                                <textarea name="form_message" class="form-control required" rows="7" placeholder="{!! __('messages.contactmessage') !!}"></textarea>
                             </div>
                             <div class="mb-5">
                                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
                                 <button type="submit" class="theme-btn btn-style-one mb-3 mb-sm-0"
-                                    data-loading-text="Please wait..."><span class="btn-title">Send message</span></button>
+                                    data-loading-text="Please wait..."><span class="btn-title">{!! __('messages.sendmessage') !!}</span></button>
                                 <button type="reset" class="theme-btn btn-style-one bg-theme-color5"><span
-                                        class="btn-title">Reset</span></button>
+                                        class="btn-title">{!! __('messages.reset') !!}</span></button>
                             </div>
                         </form>
                         <!-- Contact Form Validation-->
@@ -80,10 +80,8 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="contact-details__right">
                             <div class="sec-title">
-                                <span class="sub-title">Need any help?</span>
-                                <h2>Get in touch</h2>
-                                <div class="text">Lorem ipsum is simply free text available dolor sit amet consectetur
-                                    notted adipisicing elit sed do eiusmod tempor incididunt simply dolore magna.</div>
+                                <span class="sub-title"></span>
+                                <h4>{!! __('messages.contactother') !!}</h4>
                             </div>
                             <ul class="list-unstyled contact-details__info">
                                 <li class="d-block d-sm-flex align-items-sm-center ">
@@ -91,8 +89,8 @@
                                         <span class="lnr-icon-phone-plus"></span>
                                     </div>
                                     <div class="text ml-xs--0 mt-xs-10">
-                                        <h6>Have any question?</h6>
-                                        <a href="tel:980089850"><span>Free</span> +92 (020)-9850</a>
+                                        <h6>{!! __('messages.tel') !!}</h6>
+                                        <a href="tel:0655091666">065 509 1666</a>
                                     </div>
                                 </li>
                                 <li class="d-block d-sm-flex align-items-sm-center ">
@@ -100,8 +98,8 @@
                                         <span class="lnr-icon-envelope1"></span>
                                     </div>
                                     <div class="text ml-xs--0 mt-xs-10">
-                                        <h6>Write email</h6>
-                                        <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                        <h6>{!! __('messages.email') !!}</h6>
+                                        <a href="mailto:goldenwavespa8@gmail.com">goldenwavespa8@gmail.com</a>
                                     </div>
                                 </li>
                                 <li class="d-block d-sm-flex align-items-sm-center ">
@@ -109,8 +107,8 @@
                                         <span class="lnr-icon-location"></span>
                                     </div>
                                     <div class="text ml-xs--0 mt-xs-10">
-                                        <h6>Visit anytime</h6>
-                                        <span>66 broklyn golden street. New York</span>
+                                        <h6>{!! __('messages.addresstitle') !!}</h6>
+                                        <p>{!! __('messages.addressdetail') !!}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -123,7 +121,7 @@
 
         <!-- Map Section-->
         <section class="map-section">
-            <iframe  class="map w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.846584292412!2d100.50500667586478!3d13.727736497848715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29964ecf9415d%3A0xb8ff12d7dc1bf7a!2sGrasp%20Asia!5e0!3m2!1sth!2sth!4v1711617358506!5m2!1sth!2sth" style="border:0;" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="map w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15504.66211803763!2d100.5097198!3d13.7084225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299005c1fd39b%3A0x1f37ff04e09237dd!2zR29sZGVuIFdhdmUgU3BhIC0g4LmA4LiI4Lij4Li04LiN4LiB4Lij4Li44LiH!5e0!3m2!1sth!2sth!4v1712131631811!5m2!1sth!2sth" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <!--End Map Section-->
 

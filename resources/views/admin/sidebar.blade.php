@@ -11,9 +11,15 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="{{ route('admin.sv') }}">
+                <a class="nav-link" href="{{ route('admin.sv') }}">
                     <i class="fas fa-th"></i>
                     <span class="nav-link-text ms-1">บริการ</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.pmt') }}">
+                    <i class="fas fa-th"></i>
+                    <span class="nav-link-text ms-1">โปรโมชั่น</span>
                 </a>
             </li>
             <li class="nav-item mt-3">

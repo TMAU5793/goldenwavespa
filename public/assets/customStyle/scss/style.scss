@@ -1,8 +1,15 @@
 @import "../../scss/common/root";
 
-.main-menu .navigation > li{
-    padding: 25px 0;
+.main-menu .navigation {
+    li{
+        padding: 25px 0;
+    }
+    li.current > a{
+        color: var(--sec-title-subtitle-color);
+        
+    }
 }
+
 
 .header-style-two{
     .header-lower{
@@ -11,12 +18,20 @@
                 padding: 25px 0;
             }
         }
+        .outer-box{
+            .main-menu .navigation > li > ul{
+                left: unset;
+                right: -15px;
+                width: 90px;
+                li{
+                    padding: 0;
+                    a{
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
-}
-
-.main-menu .navigation > li.current > a{
-    color: var(--sec-title-subtitle-color);
-    
 }
 
 .about-section-two{
@@ -48,4 +63,33 @@ h3.title{
 
 h4.title{
     font-size: 18px;
+}
+
+.contact-details__info li{
+    .icon{
+        width: 20%;
+    }
+    .text{
+        width: 80%;
+    }
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-3lines{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.text-2lines{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

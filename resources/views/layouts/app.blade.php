@@ -8,6 +8,11 @@
 
    <meta name="csrf-token" content="{{ csrf_token() }}">
    <link rel="icon" type="image/x-icon" href="{{ url('assets/images/favicon-32x32.png') }}">
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="{{ url('') }}" />
+   <meta property="og:title" content="{{ (isset($title)? $title : 'Golden wave spa') }}" />
+   <meta property="og:description" content="{{ (isset($metadesc)? $metadesc : 'รวบรวมมาให้แบบครบครัน เหมือนฝันกับทุกบริการซาลอน ทั้งสระ ซอย ไดร์ ให้ครบทุกบริการเกี่ยวกับทรงผม จะดัด จะยืด จะทำสี เรามีพร้อม ตามมาด้วยทรีทเมนต์สุดเริ่ด ที่จะช่วยให้ทรงผมของคุณเป็นเหมือนกับภาพจินตนาการ พร้อมด้วยบรรยากาศสุดผ่อนคลาย') }}" />
+   <meta property="og:image" content="{{ (isset($shareimg)? $shareimg : url('assets/images/share-img.jpg') ) }}" />
 
    <!-- Stylesheets -->
    <link href="{{ url('assets/css/bootstrap.min.css') }}" rel="stylesheet">

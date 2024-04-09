@@ -29,6 +29,9 @@
     {{-- Section Content --}}
     @yield('content')
 
+    {{--  --}}
+    <script src="{{ url('assets/js/jquery.js') }}"></script>
+
     <!--   Core JS Files   -->
     <script src="{{ url('assets/argon-dashboard/js/core/popper.min.js') }}"></script>
     <script src="{{ url('assets/argon-dashboard/js/core/bootstrap.min.js') }}"></script>
@@ -44,6 +47,55 @@
         }
     </script>
     <script src="{{ url('assets/argon-dashboard/js/argon-dashboard.min.js') }}"></script>
+
+    <script src="https://cdn.tiny.cloud/1/vi7ggidcim5bkvy3fd4k7qnjktkycdkidysawlyjdkjz03nn/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea.tinymce',
+            images_upload_url: "{{ route('tinyupload') }}",
+            image_class_list: [{
+                title: 'img-responsive',
+                value: 'img-responsive'
+            },],
+            setup: function(editor) {
+                editor.on('init change', function() {
+                    editor.save();
+                });
+            },
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker markdown',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+
+            image_title: true,
+            automatic_uploads: true,
+            file_picker_types: 'image',
+            file_picker_callback: function(cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+                input.onchange = function() {
+                    var file = this.files[0];
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+                        cb(blobInfo.blobUri(), { title: file.name });
+                    };
+                };
+                input.click();
+            }
+        });
+
+        @if (Session::get('complete'))
+            setTimeout(function() {
+                $('.alert-complete').remove();
+            }, 3000);
+        @endif
+    </script>
 </body>
 
 </html>
